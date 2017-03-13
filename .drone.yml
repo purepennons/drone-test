@@ -9,7 +9,7 @@ build:
         tag: true
         submodule_override:
             thesis_article: https://github.com/purepennons/thesis_article.git
-        submodule_update_remote: true
+        submodule_update_remote: https://github.com/purepennons/thesis_article.git
         commands:
             # - git submodule init
             # - git submodule update
