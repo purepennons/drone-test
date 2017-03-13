@@ -9,9 +9,10 @@ build:
         tag: true
         submodule_override:
             thesis_article: https://github.com/purepennons/thesis_article.git
+        submodule_update_remote: true
         commands:
-            - git submodule init
-            - git submodule update
+            # - git submodule init
+            # - git submodule update
             - pwd
             - ls -al
             - cd thesis_article/NTUST_Thesis_template_1.5
