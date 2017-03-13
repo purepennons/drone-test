@@ -1,3 +1,6 @@
+workspace:
+  base: /
+  path: /
 build:
 #   clone_article:
 #     image: plugins/git
@@ -15,6 +18,7 @@ build:
     submodule_override:
       thesis_article: https://github.com/purepennons/thesis_article.git
     commands:
+        - pwd
         - cd ..
         - pwd
         - ls -al
