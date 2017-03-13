@@ -6,7 +6,7 @@ build:
         image: plugins/git
     
     clone_by_go_get:
-        image: glang:1.7
+        image: golang:1.7
         commands:
             - pwd
             - cd ..
