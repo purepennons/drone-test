@@ -5,7 +5,7 @@ build:
     clone_article:
         image: plugins/git
     
-    clone_by_go_get
+    clone_by_go_get:
         image: glang:1.7
         commands:
             - pwd
