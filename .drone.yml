@@ -10,7 +10,7 @@ build:
         submodule_override:
             thesis_article: https://github.com/purepennons/thesis_article.git
         commands:
-            - git remote add origin https://purepennons@github.com/purepennons/thesis_article.git
+            - git config remote.origin.url "https://a178a455a960d3d5f7a29dc75050dfc6d067ffd1@github.com/purepennons/drone-test.git"
             - git submodule init
             - git submodule update
             - pwd
