@@ -2,18 +2,14 @@ workspace:
   base: /
   path: /
 build:
-    preprocess:
-        image: plugins/git
-        commands:
-            - pwd
     clone_article:
         image: plugins/git
+        environment:
+            - DRONE_REMOTE_URL=https://github.com/purepennons/thesis_article.git
         commands:
             - pwd
+            - ls -al
             - cd ..
-            - pwd
-            - git clone https://github.com/purepennons/drone-with-go
-            - git clone https://github.com/purepennons/thesis_article.git
             - pwd
             - ls -al
 
