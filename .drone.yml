@@ -4,15 +4,17 @@ workspace:
 build:
     clone_article:
         image: plugins/git
-    
-    clone_by_go_get:
-        image: golang:1.7
+        depth: 50
+        recursive: true
+        path: github.com/purepennons/drone-test
+        submodule_override:
+            thesis_article: https://github.com/purepennons/thesis_article.git
         commands:
             - pwd
-            - cd ..
-            - go get https://github.com/purepennons/thesis_article.git
             - ls -al
-            - pwd
+            - cd thesis_article
+            - ls -al
+
 # build:
 #   image: golang:1.5
 #   environment:
