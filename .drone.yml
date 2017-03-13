@@ -1,0 +1,38 @@
+build:
+  clone_article:
+    image: plugins/git
+    commands:
+        - cd ..
+        - pwd
+        - git clone https://github.com/purepennons/drone-with-go
+        - git clone https://github.com/purepennons/thesis_article.git
+        - pwd
+        - ls -al
+
+# build:
+#   image: golang:1.5
+#   environment:
+#     - GO15VENDOREXPERIMENT=1
+#     - CGO_ENABLED=0
+#   commands:
+#     - cd ..
+#     - pwd
+#     - ls -al
+
+# notify:
+#   slack:
+#     webhook_url: https://hooks.slack.com/services/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
+#     channel: general
+#     username: drone
+#     when:
+#       success: true
+#       failure: true
+#       change: true
+#       branch: [master]
+#       event: [tag, push, pull_request]
+#     template: |
+#       {{#success build.status}}
+#         {{ build.author }} successfully pushed to {{ build.branch}}
+#       {{else}}
+#         {{ build.author }} broke the build. Hang your head in shame.
+#       {{/success}}
