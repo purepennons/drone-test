@@ -17,6 +17,7 @@ build:
             - cd thesis_article/NTUST_Thesis_template_1.5
             - ls -al
 
+            
 # build:
 #   image: golang:1.5
 #   environment:
