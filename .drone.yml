@@ -2,16 +2,20 @@ workspace:
   base: /
   path: /
 build:
-  clone_article:
-    image: plugins/git
-    commands:
-        - pwd
-        - cd ..
-        - pwd
-        - git clone https://github.com/purepennons/drone-with-go
-        - git clone https://github.com/purepennons/thesis_article.git
-        - pwd
-        - ls -al
+    preprocess:
+        image: plugins/git
+        commands:
+            - pwd
+    clone_article:
+        image: plugins/git
+        commands:
+            - pwd
+            - cd ..
+            - pwd
+            - git clone https://github.com/purepennons/drone-with-go
+            - git clone https://github.com/purepennons/thesis_article.git
+            - pwd
+            - ls -al
 
 # build:
 #   image: golang:1.5
