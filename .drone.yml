@@ -2,24 +2,14 @@ workspace:
   base: /
   path: /
 build:
-#   clone_article:
-#     image: plugins/git
-#     commands:
-#         - cd ..
-#         - pwd
-#         - git clone https://github.com/purepennons/drone-with-go
-#         - git clone https://github.com/purepennons/thesis_article.git
-#         - pwd
-#         - ls -al
-  clone:
+  clone_article:
     image: plugins/git
-    depth: 50
-    recursive: true
-    submodule_override:
-      thesis_article: https://github.com/purepennons/thesis_article.git
     commands:
         - pwd
         - cd ..
+        - pwd
+        - git clone https://github.com/purepennons/drone-with-go
+        - git clone https://github.com/purepennons/thesis_article.git
         - pwd
         - ls -al
 
