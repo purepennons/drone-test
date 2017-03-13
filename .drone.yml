@@ -1,14 +1,23 @@
 build:
-  clone_article:
+#   clone_article:
+#     image: plugins/git
+#     commands:
+#         - cd ..
+#         - pwd
+#         - git clone https://github.com/purepennons/drone-with-go
+#         - git clone https://github.com/purepennons/thesis_article.git
+#         - pwd
+#         - ls -al
+  clone:
     image: plugins/git
+    depth: 50
+    recursive: true
+    submodule_override:
+      thesis_article: https://github.com/purepennons/thesis_article.git
     commands:
         - cd ..
         - pwd
-        - git clone https://github.com/purepennons/drone-with-go
-        - git clone https://github.com/purepennons/thesis_article.git
-        - pwd
         - ls -al
-
 
 # build:
 #   image: golang:1.5
