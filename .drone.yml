@@ -4,15 +4,15 @@ workspace:
 build:
     clone_article:
         image: plugins/git
-        environment:
-            - DRONE_REMOTE_URL=https://github.com/purepennons/thesis_article.git
+    
+    clone_by_go_get
+        image: glang:1.7
         commands:
             - pwd
-            - ls -al
             - cd ..
-            - pwd
+            - go get https://github.com/purepennons/thesis_article.git
             - ls -al
-
+            - pwd
 # build:
 #   image: golang:1.5
 #   environment:
