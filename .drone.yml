@@ -6,13 +6,13 @@ build:
         image: plugins/git
         depth: 50
         recursive: true
-        path: github.com/purepennons/drone-test
+        tag: true
         submodule_override:
             thesis_article: https://github.com/purepennons/thesis_article.git
         commands:
             - pwd
             - ls -al
-            - cd thesis_article
+            - cd thesis_article/NTUST_Thesis_template_1.5
             - ls -al
 
 # build:
